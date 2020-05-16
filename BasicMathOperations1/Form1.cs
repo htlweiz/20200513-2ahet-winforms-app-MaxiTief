@@ -68,5 +68,121 @@ namespace BasicMathOperations1
             txtNumber1.Focus();
             txtNumber1.SelectAll();
         }
+        private void btn_Sub_Click(object sender, EventArgs e)
+        {
+
+            int number1, number2;
+
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                lblResult.Text = Convert.ToString(number1 - number2);
+                lblResultType.Text = "Differenz";
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int number1, number2;
+            
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+
+                for (int i = 0; i <= number2; i++)
+                {
+                    int Potenzwert = number1;                    
+                    lblResult.Text = Convert.ToString(Potenzwert = number1 * number1);
+                    lblResultType.Text = "Potenzwert";
+                }
+                               
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+
+        }
+
+
+
+        private void txtNumber1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumber2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Div_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Div_Click_1(object sender, EventArgs e)
+        {
+            int number1, number2;
+
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                lblResult.Text = Convert.ToString(number1 / number2);
+                lblResultType.Text = "Quotient";
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
+
+        private void btn_Multi_Click(object sender, EventArgs e)
+        {
+            int number1, number2;
+
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                lblResult.Text = Convert.ToString(number1 * number2);
+                lblResultType.Text = "Produkt";
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
     }
 }
